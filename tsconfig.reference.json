@@ -1,0 +1,9 @@
+{
+  "//": "Trecho de referência: o pacote usa o alias @/* → ./src/*. Copie o bloco paths para o tsconfig.json do seu projeto Next.js hospedeiro (não substitua o seu tsconfig inteiro por este).",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
