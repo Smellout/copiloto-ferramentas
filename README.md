@@ -60,6 +60,10 @@ src/
     (app)/nascimento/    page.tsx + nascimento-form.tsx
     api/generate/        route.ts   ← costura de infra (ver INTEGRACAO.md)
     api/historico/       route.ts   ← costura de infra (ver INTEGRACAO.md)
+public/
+  companhias/        62 logotipos oficiais de companhias (60 .svg + 2 .png),
+                     servidos em /companhias/<IATA>.<ext>. São os logos que o
+                     itinerário exibe no selo de cada voo (ver visual-companhias.ts).
 ```
 
 ## O que o integrador precisa prover
@@ -76,6 +80,9 @@ src/
 4. **CSS**: as telas usam classes `.cg-*` escopadas em `.cg-app` (o visual do app
    original). Este pacote **não inclui** o CSS; replique as classes ou estilize por
    conta própria.
+5. **Assets estáticos**: a pasta `public/companhias/` precisa ser servida na raiz
+   (`/companhias/...`). Em Next.js, basta mantê-la em `public/`. Companhia sem
+   arquivo de logo cai no selo genérico — não quebra.
 
 ## Regras de domínio que não podem quebrar
 
